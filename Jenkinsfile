@@ -33,21 +33,19 @@ pipeline {
              }
          }
       }
-    }     
-
-     stage('Maven Build'){
-        steps{
-              sh "mvn clean compile"
-      }
-    }     
+    }      
     
-      stage('OWASP Dependency Check'){
+    stage('OWASP Dependency Check'){
         steps{
               dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'DC'
               dependencyCheckPublisher pattern: '**/Dependency-check-report.xml '
       }
     }
-
     
+    stage('Maven Build'){
+        steps{
+              sh "mvn clean compile"
+      }
+    }     
    }
 }
