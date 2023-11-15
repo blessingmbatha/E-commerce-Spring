@@ -92,14 +92,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-                                <groupId>org.springframework.boot</groupId>
-                                <artifactId>spring-boot-maven-plugin</artifactId>
-                                <configuration>
-                                     <mainClass>com.example.YourMainClass</mainClass>
+				<configuration>
+                                     <mainClass>org.springframework.boot</mainClass>
                                 </configuration>
-                       </plugin>
+			</plugin>
 		</plugins>
 	</build>
 
