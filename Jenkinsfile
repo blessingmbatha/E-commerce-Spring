@@ -46,6 +46,18 @@ pipeline {
         steps{
               sh "mvn clean compile"
       }
-    }     
+    } 
+
+    stage('Docker Build & Push') {
+            steps {
+                   script {
+                       withDockerRegistry(credentialsId: 'docker-token', toolName: 'docker') {
+                            sh "docker build -t project2 ."
+                            sh "docker tag webapp nkosenhlembatha/project2:latest"
+                            sh "docker push nkosenhlembatha/project2:latest "
+                        }
+                   } 
+            }
+        }
    }
 }
