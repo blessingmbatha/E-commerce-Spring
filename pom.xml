@@ -5,29 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nkosenhlembatha</groupId>
-    <artifactId>e-commerce-Spring</artifactId>
-    <version>1.0</version>
-         
-    <packaging>jar</packaging>    
+    <artifactId>nkosenhlembatha-project2</artifactId>
+    <version>1.0.0</version>
 
-    <name>e-commerce-Spring</name>
-    <url></url>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>e-commerce-Spring-parent</artifactId>
-        <version>2.2.4.RELEASE</version>
-    </parent>
+    <name>nkosenhlembathaProject2</name>
+    <description>e-commerce-spring</description>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.nkosenhlembatha</groupId>
+            <artifactId>nkosenhlembatha-project2</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -48,18 +45,14 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
     </dependencies>
 
+    
     <build>
-
-        <finalName>spring-boot-web</finalName>
-
+             <finalName>e-commerce-Spring-web</finalName>
+             
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -69,9 +62,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
+            
         </plugins>
     </build>
-
-
 </project>
