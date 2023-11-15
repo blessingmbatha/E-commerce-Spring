@@ -64,7 +64,7 @@ pipeline {
             steps {
                 script {
                     def imageName = 'nkosenhlembatha/project2:latest'
-                    sh "trivy image --severity HIGH,MEDIUM,LOW --no-progress ${nkosenhlembatha/project2}"
+                    sh "trivy image --severity HIGH,MEDIUM,LOW --no-progress ${project2}"
                 }
             }
         }
