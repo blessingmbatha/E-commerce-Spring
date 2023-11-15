@@ -58,6 +58,14 @@ pipeline {
                         }
                    } 
             }
-        }
+      }
+
+       stage('Docker Trivy Scan'){
+        steps{
+              sh "trivy image nkosenhlembatha/project2:latest"
+      }
+    } 
+
+     
    }
 }
