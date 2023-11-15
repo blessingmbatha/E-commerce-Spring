@@ -7,8 +7,10 @@
     <groupId>com.nkosenhlembatha</groupId>
     <artifactId>e-commerce-Spring</artifactId>
     <version>1.0</version>
+         
+    <packaging>jar</parkaging>    
 
-    <name>spring-boot-demo</name>
+    <name>e-commerce-Spring</name>
     <url></url>
 
     <parent>
