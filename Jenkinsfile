@@ -60,11 +60,14 @@ pipeline {
             }
       }
 
-       stage('Docker Trivy Scan'){
-        steps{
-              sh "trivy image nkosenhlembatha/project2:latest"
-      }
-    } 
+       stage('Scan Docker Image with Trivy') {
+            steps {
+                script {
+                    def imageName = 'nkosenhlembatha/project2:latest'
+                    sh "trivy image --severity HIGH,MEDIUM,LOW --no-progress ${nkosenhlembatha/project2:latest}"
+                }
+            }
+        }
 
      
    }
