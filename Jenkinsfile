@@ -7,13 +7,13 @@ pipeline {
       }
 
   stages{
-    stage ('Git Checkout'){
+    stage('Git Checkout'){
       step{
         git changelog: false, poll: false, url: 'https://github.com/blessingmbatha/E-commerce-Spring.git'
       }
     }
 
-    stage ('Code Compile'){
+    stage('Code Compile'){
       step{
         sh "mvn compile"
       }
