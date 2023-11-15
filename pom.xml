@@ -8,7 +8,7 @@
     <artifactId>e-commerce-Spring</artifactId>
     <version>1.0</version>
          
-    <packaging>jar</parkaging>    
+    <packaging>jar</packaging>    
 
     <name>e-commerce-Spring</name>
     <url></url>
