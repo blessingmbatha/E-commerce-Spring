@@ -7,6 +7,12 @@ pipeline {
       }
 
   stages{ 
+    stage('Cleanup Workspace'){
+        steps{
+              CleanWs()
+      }
+    }
+    
     stage('Git Checkout'){
         steps{
                git changelog: false, poll: false, url: 'https://github.com/blessingmbatha/E-commerce-Spring.git'
