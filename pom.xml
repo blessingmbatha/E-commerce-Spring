@@ -103,6 +103,32 @@
                                      <mainClass>org.springframework.boot</mainClass>
                                 </configuration>
 			</plugin>
+
+			<plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.bsc.maven</groupId>
+                                    <artifactId>maven-processor-plugin</artifactId>
+                                    <versionRange>[2.0.2,)</versionRange>
+                                    <goals>
+                                        <goal>process</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute />
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>                         
+                    </lifecycleMappingMetadata>
+                </configuration>
+            </plugin>
+			
 		</plugins>
 	</build>
 
