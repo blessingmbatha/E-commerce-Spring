@@ -60,14 +60,11 @@ pipeline {
             }
       }
 
-       stage('Scan Docker Image with Trivy') {
-            steps {
-                script {
-                    def imageName = 'nkosenhlembatha/project2:latest'
-                    sh "trivy image --severity HIGH,MEDIUM,LOW --no-progress ${project2}"
-                }
-            }
-        }
+       stage('Trivy Scan'){
+        steps{
+              sh "trivy fs --security-checks vuln, config /var/lib/jenkins/workspace/Project 2 "
+      }
+    }
 
      
    }
