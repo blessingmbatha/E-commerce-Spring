@@ -60,12 +60,12 @@ pipeline {
             }
       }
 
-       stage('Trivy Scan'){
-        steps{
-              sh "trivy fs --security-checks vuln, config /var/lib/jenkins/workspace/Project 2 "
-      }
-    }
-
-     
+    stage('Trivy Scan') {
+           steps {
+               script {
+	                sh ("docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image nkosenhlembatha/project2:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table')
+               }
+           }
+       }
    }
 }
